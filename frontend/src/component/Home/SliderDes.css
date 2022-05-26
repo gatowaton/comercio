@@ -1,0 +1,37 @@
+.sliderDes{
+    text-decoration: none;
+}
+
+.imgSlider{
+    width: 400px;
+    padding-left: 3em;
+    padding-right: 3em;
+    
+}
+
+.textslider {
+    text-decoration: none;
+    font-family: Roboto;
+}
+.sliderTitle{
+    color: #14279B;
+    font-size: 20px;
+}
+.sliderDesc{
+    font-size: 15px;
+}
+.sliderPrice{
+    color: #228B22;
+    font-size: 20px;
+}
+.sliderBtn{
+    font-size: 20px;
+    color: #14279B;
+    background-color: transparent;
+    border-color: blue;
+    margin-bottom: 20px;
+}
+
+.sliderBtn:hover{
+    background-color: #3D56B2;
+}
