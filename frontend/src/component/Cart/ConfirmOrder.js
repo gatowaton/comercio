@@ -43,24 +43,24 @@ const ConfirmOrder = ({ history }) => {
       <div className="confirmOrderPage">
         <div>
           <div className="confirmshippingArea">
-            <Typography>Informacion de Envio</Typography>
+            <Typography>Shipping Information</Typography>
             <div className="confirmshippingAreaBox">
               <div>
-                <p>Nombre:</p>
+                <p>Name:</p>
                 <span>{user.name}</span>
               </div>
               <div>
-                <p>Telefono:</p>
+                <p>Phone:</p>
                 <span>{shippingInfo.phoneNo}</span>
               </div>
               <div>
-                <p>Direccion:</p>
+                <p>Address:</p>
                 <span>{address}</span>
               </div>
             </div>
           </div>
           <div className="confirmCartItems">
-            <Typography>Tus productos:</Typography>
+            <Typography>Your Products:</Typography>
             <div className="confirmCartItemsContainer">
               {cartItems &&
                 cartItems.map((item) => (
@@ -81,18 +81,18 @@ const ConfirmOrder = ({ history }) => {
         {/*  */}
         <div>
           <div className="orderSummary">
-            <Typography>Resumen del Pedido</Typography>
+            <Typography>Summary Order</Typography>
             <div>
               <div>
                 <p>Subtotal:</p>
                 <span>${subtotal}</span>
               </div>
               <div>
-                <p>Cargos de Envio:</p>
+                <p>Shipping Charges:</p>
                 <span>${shippingCharges}</span>
               </div>
               <div>
-                <p>Impuesto:</p>
+                <p>Tax:</p>
                 <span>${tax}</span>
               </div>
             </div>
@@ -104,7 +104,7 @@ const ConfirmOrder = ({ history }) => {
               <span>${totalPrice}</span>
             </div>
 
-            <button onClick={proceedToPayment}>Pagar</button>
+            <button onClick={proceedToPayment}>Pay</button>
           </div>
         </div>
       </div>

@@ -8,15 +8,15 @@ import "./CheckoutSteps.css";
 const CheckoutSteps = ({ activeStep }) => {
   const steps = [
     {
-      label: <Typography>Detalles de Envio</Typography>,
+      label: <Typography>Shipping Details</Typography>,
       icon: <LocalShippingIcon />,
     },
     {
-      label: <Typography>Confirmar Orden</Typography>,
+      label: <Typography>Confirm Order</Typography>,
       icon: <LibraryAddCheckIcon />,
     },
     {
-      label: <Typography>Pago</Typography>,
+      label: <Typography>Payment</Typography>,
       icon: <AccountBalanceIcon />,
     },
   ];

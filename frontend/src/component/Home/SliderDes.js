@@ -6,10 +6,9 @@ import tv1 from "../../images/tv1.jpg"
 
 
 
-function Banner() {
+function SliderDes({slider}) {
     return (
-      <div className="relative">
-          <div className="sliderDes"/>
+      <div className="desc_slider">
           <Carousel
           swipeable
           infiniteLoop
@@ -20,61 +19,15 @@ function Banner() {
           
       
           >
-            <div className="container">
-                <div className="imgSlider"> 
-                    <img loading="lazy" src={tv1} alt="" />  
-                </div> 
-                <div className="textslider">
-                    <p className="sliderTitle">Hisense Serie A4 TV inteligente FHD de 40 pulgadas</p>
-                    <p className="sliderDesc">Resolución completa de alta definición: junto con su pantalla LCD de alta definición de 1080p, encontrarás una potente retroiluminación LED completa en el trabajo creando una imagen más nítida y colorida.</p>
-                    <p className="sliderPrice">$400000</p>  
-                    <Link to={`/product/628b22df32e7d825b492dcc2`}>
-                        <button className="sliderBtn">Comprar</button>
-                    </Link>
+            
+            {Object.entries(slider).map(([ida,{anuncio,image}])=>(
+                <div key={ida} className="card_slider">
+                    <img className="img_card_slider" loading="lazy" src={image} alt={anuncio} width={100} />
+                    <div className="card_slider_info">
+                        <p>{anuncio}</p>
+                    </div>
                 </div>
-            </div>
-
-            <div className="container">
-                <div className="imgSlider"> 
-                    <img loading="lazy" src={tv1} alt="" />  
-                </div> 
-                <div className="textslider">
-                    <p className="sliderTitle">Hisense Serie A4 TV inteligente FHD de 40 pulgadas</p>
-                    <p className="sliderDesc">Resolución completa de alta definición: junto con su pantalla LCD de alta definición de 1080p, encontrarás una potente retroiluminación LED completa en el trabajo creando una imagen más nítida y colorida.</p>
-                    <p className="sliderPrice">$400000</p>  
-                    <Link to={`/product/628b22df32e7d825b492dcc2`}>
-                        <button className="sliderBtn">Comprar</button>
-                    </Link>
-                </div>
-            </div> 
-
-            <div className="container">
-                <div className="imgSlider"> 
-                    <img loading="lazy" src={tv1} alt="" />  
-                </div> 
-                <div className="textslider">
-                    <p className="sliderTitle">Hisense Serie A4 TV inteligente FHD de 40 pulgadas</p>
-                    <p className="sliderDesc">Resolución completa de alta definición: junto con su pantalla LCD de alta definición de 1080p, encontrarás una potente retroiluminación LED completa en el trabajo creando una imagen más nítida y colorida.</p>
-                    <p className="sliderPrice">$400000</p>  
-                    <Link to={`/product/628b22df32e7d825b492dcc2`}>
-                        <button className="sliderBtn">Comprar</button>
-                    </Link>
-                </div>
-            </div> 
-
-            <div className="container">
-                <div className="imgSlider"> 
-                    <img loading="lazy" src={tv1} alt="" />  
-                </div> 
-                <div className="textslider">
-                    <p className="sliderTitle">Hisense Serie A4 TV inteligente FHD de 40 pulgadas</p>
-                    <p className="sliderDesc">Resolución completa de alta definición: junto con su pantalla LCD de alta definición de 1080p, encontrarás una potente retroiluminación LED completa en el trabajo creando una imagen más nítida y colorida.</p>
-                    <p className="sliderPrice">$400000</p>  
-                    <Link to={`/product/628b22df32e7d825b492dcc2`}>
-                        <button className="sliderBtn">Comprar</button>
-                    </Link>
-                </div>
-            </div>  
+            ))} 
   
             
           </Carousel>
@@ -82,4 +35,4 @@ function Banner() {
     )
   }
   
-  export default Banner
+  export default SliderDes

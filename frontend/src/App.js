@@ -38,10 +38,8 @@ import ProcessOrder from "./component/Admin/ProcessOrder";
 import UsersList from "./component/Admin/UsersList";
 import UpdateUser from "./component/Admin/UpdateUser";
 import ProductReviews from "./component/Admin/ProductReviews";
-import Contact from "./component/layout/Contact/Contact";
-import About from "./component/layout/About/About";
-import NotFound from "./component/layout/Not Found/NotFound";
 import Header from "./component/layout/Header/Header.js";
+import Mail from "./component/layout/Contact/Mail";
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -88,9 +86,7 @@ function App() {
 
         <Route exact path="/search" component={Search} />
 
-        <Route exact path="/contact" component={Contact} />
-
-        <Route exact path="/about" component={About} />
+        <Route exact path="/contact" component={Mail} />
 
         <ProtectedRoute exact path="/account" component={Profile} />
 
@@ -181,7 +177,7 @@ function App() {
 
         <Route
           component={
-            window.location.pathname === "/process/payment" ? null : NotFound
+            window.location.pathname === "/process/payment"
           }
         />
       </Switch>

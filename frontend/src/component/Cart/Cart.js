@@ -41,15 +41,15 @@ const Cart = ({ history }) => {
         <div className="emptyCart">
           <RemoveShoppingCartIcon />
 
-          <Typography>No hay productos en tu carro de compras</Typography>
-          <Link to="/products">Ver Productos</Link>
+          <Typography>No Product in Your Cart</Typography>
+          <Link to="/products">View Products</Link>
         </div>
       ) : (
         <Fragment>
           <div className="cartPage">
             <div className="cartHeader">
-              <p>Producto</p>
-              <p>Cantidad</p>
+              <p>Product</p>
+              <p>Quantity</p>
               <p>Subtotal</p>
             </div>
 
@@ -87,7 +87,7 @@ const Cart = ({ history }) => {
             <div className="cartGrossProfit">
               <div></div>
               <div className="cartGrossProfitBox">
-                <p>Total</p>
+                <p>Gross Total</p>
                 <p>{`$${cartItems.reduce(
                   (acc, item) => acc + item.quantity * item.price,
                   0
@@ -95,7 +95,7 @@ const Cart = ({ history }) => {
               </div>
               <div></div>
               <div className="checkOutBtn">
-                <button onClick={checkoutHandler}>Adquirir</button>
+                <button onClick={checkoutHandler}>Check Out</button>
               </div>
             </div>
           </div>

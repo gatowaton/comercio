@@ -8,8 +8,8 @@ import { useSelector, useDispatch } from "react-redux";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import  Slider from "./Slider";
-import  SliderDes from "./SliderDes";
-import Destacados from "./Destacados";
+import Destacados from "./destacados/Destacados";
+import data from "../../data.json";
 
 const Home = () => {
 
@@ -34,7 +34,7 @@ const Home = () => {
           <MetaData title="ECOMMERCE" />
 
           <div className="anuncio">
-            <p>Envio gratis por compras sobre $20.000</p>
+            <p>Free shipping for purchases over $100</p>
           </div>
           <div className="titulo">
             <h1>Cat Store </h1>
@@ -43,14 +43,12 @@ const Home = () => {
           </div>
           <Slider/>
 
-          <h2 className="homeHeading">Productos Destacados</h2>
+          <h2 className="homeHeading">Featured Products</h2>
 
-          <Destacados/>
-
-          <SliderDes/>
+          <Destacados destacados={data.destacados}/>
 
 
-          <h2 className="homeHeading">Productos</h2>
+          <h2 className="homeHeading">Products</h2>
 
           <div className="container" id="container">
             {products &&

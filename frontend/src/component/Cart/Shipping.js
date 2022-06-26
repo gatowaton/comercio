@@ -28,7 +28,7 @@ const Shipping = ({ history }) => {
   const shippingSubmit = (e) => {
     e.preventDefault();
 
-    if (phoneNo.length < 9 || phoneNo.length > 9) {
+    if (phoneNo.length < 9 || phoneNo.length > 15) {
       alert.error("Phone Number should be 9 digits Long");
       return;
     }
@@ -46,7 +46,7 @@ const Shipping = ({ history }) => {
 
       <div className="shippingContainer">
         <div className="shippingBox">
-          <h2 className="shippingHeading">Detalles de Envio</h2>
+          <h2 className="shippingHeading">Shipping Details</h2>
 
           <form
             className="shippingForm"
@@ -57,7 +57,7 @@ const Shipping = ({ history }) => {
               <HomeIcon />
               <input
                 type="text"
-                placeholder="Direccion"
+                placeholder="Address"
                 required
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
@@ -68,7 +68,7 @@ const Shipping = ({ history }) => {
               <LocationCityIcon />
               <input
                 type="text"
-                placeholder="Comuna"
+                placeholder="City"
                 required
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
@@ -79,7 +79,7 @@ const Shipping = ({ history }) => {
               <PinDropIcon />
               <input
                 type="number"
-                placeholder="Codigo Postal"
+                placeholder="pinCode"
                 required
                 value={pinCode}
                 onChange={(e) => setPinCode(e.target.value)}
@@ -90,7 +90,7 @@ const Shipping = ({ history }) => {
               <PhoneIcon />
               <input
                 type="number"
-                placeholder="+56 - numero de celular"
+                placeholder="Phone"
                 required
                 value={phoneNo}
                 onChange={(e) => setPhoneNo(e.target.value)}
@@ -106,7 +106,7 @@ const Shipping = ({ history }) => {
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
               >
-                <option value="">Pais</option>
+                <option value="">Country</option>
                 {Country &&
                   Country.getAllCountries().map((item) => (
                     <option key={item.isoCode} value={item.isoCode}>
@@ -125,7 +125,7 @@ const Shipping = ({ history }) => {
                   value={state}
                   onChange={(e) => setState(e.target.value)}
                 >
-                  <option value="">Region</option>
+                  <option value="">State</option>
                   {State &&
                     State.getStatesOfCountry(country).map((item) => (
                       <option key={item.isoCode} value={item.isoCode}>

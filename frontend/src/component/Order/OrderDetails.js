@@ -34,27 +34,27 @@ const OrderDetails = ({ match }) => {
               <Typography component="h1">
                 Order #{order && order._id}
               </Typography>
-              <Typography>Informacion de Envio</Typography>
+              <Typography>Shipping Info</Typography>
               <div className="orderDetailsContainerBox">
                 <div>
-                  <p>Nombre:</p>
+                  <p>Name:</p>
                   <span>{order.user && order.user.name}</span>
                 </div>
                 <div>
-                  <p>Telefono:</p>
+                  <p>Phone:</p>
                   <span>
                     {order.shippingInfo && order.shippingInfo.phoneNo}
                   </span>
                 </div>
                 <div>
-                  <p>Direccion:</p>
+                  <p>Address:</p>
                   <span>
                     {order.shippingInfo &&
                       `${order.shippingInfo.address}, ${order.shippingInfo.city}, ${order.shippingInfo.state}, ${order.shippingInfo.pinCode}, ${order.shippingInfo.country}`}
                   </span>
                 </div>
               </div>
-              <Typography>Pago</Typography>
+              <Typography>Payment</Typography>
               <div className="orderDetailsContainerBox">
                 <div>
                   <p
@@ -67,18 +67,18 @@ const OrderDetails = ({ match }) => {
                   >
                     {order.paymentInfo &&
                     order.paymentInfo.status === "succeeded"
-                      ? "Pagado"
-                      : "No Pagado"}
+                      ? "PAID"
+                      : "NOT PAID"}
                   </p>
                 </div>
 
                 <div>
-                  <p>Monto:</p>
+                  <p>Amount:</p>
                   <span>{order.totalPrice && order.totalPrice}</span>
                 </div>
               </div>
 
-              <Typography>Estado de Orden</Typography>
+              <Typography>Order Status</Typography>
               <div className="orderDetailsContainerBox">
                 <div>
                   <p
@@ -95,7 +95,7 @@ const OrderDetails = ({ match }) => {
             </div>
 
             <div className="orderDetailsCartItems">
-              <Typography>Productos del Pedido:</Typography>
+              <Typography>Order Items:</Typography>
               <div className="orderDetailsCartItemsContainer">
                 {order.orderItems &&
                   order.orderItems.map((item) => (
@@ -120,3 +120,4 @@ const OrderDetails = ({ match }) => {
 };
 
 export default OrderDetails;
+

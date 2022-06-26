@@ -4,7 +4,6 @@
 .anuncio p {
   text-align: center;
   color: white;
-  font-family: Roboto;
 }
 
 .titulo{
@@ -13,14 +12,12 @@
   text-align: center;
 }
 .titulo h1{
-  text-align: center;
-  font-family: Roboto;  
+  text-align: center; 
 }
 
 
 .homeHeading {
   text-align: center;
-  font-family: Roboto;
   font-size: 1.4vmax;
   border-bottom: 1px solid rgba(21, 21, 21, 0.5);
   width: 20vmax;
@@ -28,24 +25,35 @@
   margin: 5vmax auto;
   color: rgb(0, 0, 0, 0.7);
 }
-
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center;
+}
 .productCard {
-  width: 14vmax;
   display: flex;
   flex-direction: column;
+  margin: 1em auto;
+  width: 20em;
+  border-radius: 20px;
+  background-color: white;
+  border: #aaa 2px solid;
   text-decoration: none;
-  color: rgb(48, 48, 48);
-  margin: 2vmax;
-  transition: all 0.5s;
-  padding-bottom: 0.5vmax;
+  color: black;
+  transition: all 1s;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+  text-align: center;
 }
 
 .productCard > img {
   width: 14vmax;
+  margin: auto;
 }
 
-.productCard > div {
-  margin: 0.5vmax;
+.productCard div {
+  margin: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -53,11 +61,10 @@
 
 .productCardSpan {
   margin: 0.5vmax;
-  font: 300 0.7vmax "Roboto";
+  font: 300 0.7vmax;
 }
 
 .productCard > p {
-  font-family: "Roboto";
   font-size: 1.2vmax;
   margin: 1vmax 0.5vmax;
   margin-bottom: 0;
@@ -75,9 +82,8 @@
 }
 
 .productCard:hover {
-  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
-
-  transform: translateY(-1vmax);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.7);
 }
 
 @media screen and (max-width: 600px) {

@@ -59,7 +59,7 @@
 }
 
 .pageItemActive {
-  background-color: tomato;
+  background-color: #14279B;
 }
 
 .pageLinkActive {
@@ -67,43 +67,45 @@
 }
 
 .filterBox {
-  width: 10vmax;
-  position: absolute;
-  top: 10vmax;
-  left: 4vmax;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+.filters{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+.prices_filter{
+  width: 20em;
+  justify-content: center;
+  margin: auto;
+}
+.ratings_filter{
+  width: 20em;
+  margin: auto;
 }
 
 .categoryBox {
-  padding: 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .category-link {
   list-style: none;
   color: rgba(0, 0, 0, 0.61);
-  font: 400 0.8vmax "Roboto";
-  margin: 0.4vmax;
+  font-size: 1.5em;
+  margin: 2em auto;
   cursor: pointer;
   transition: all 0.5s;
 }
 .category-link:hover {
-  color: tomato;
+  color: #14279B;
 }
 
 .filterBox > fieldset {
   border: 1px solid rgba(0, 0, 0, 0.329);
-}
-
-@media screen and (max-width: 600px) {
-  .filterBox {
-    width: 20vmax;
-    position: static;
-    margin: auto;
-  }
-
-  .page-link {
-    font: 300 1.7vmax "Roboto";
-  }
-  .category-link {
-    font: 400 1.8vmax "Roboto";
-  }
 }
